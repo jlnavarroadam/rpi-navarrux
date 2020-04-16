@@ -12,11 +12,23 @@ Si no dispones de esa tarjeta, no pasa nada. El sistema también permite trabaja
 
 ¿Cómo instalarlo?
 
-Descarga los dos archivos que hay en el repositorio:
+Primero, cambia la contraseña root por defecto. Estando en el usuario pi, teclea:
+
+sudo passwd root
+
+Luego entra como root:
+su
+
+Ahora, dscarga los dos archivos que hay en el repositorio:
 InstalacionRPI.sh
 rpi-navarrux.tgz
 
 Copia o clona en tu rpi en la carpeta /opt
+  Por ejemplo:
+    apt-get install git
+    git clone https://github.com/jlnavarroadam/rpi-navarrux.git
+    cd rpi-navarrux
+
 Una vez tengas esos archivos, dale permisos de ejecución al archivo .sh:
 
 chmod +x InstalacionRPI.sh
