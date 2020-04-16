@@ -28,6 +28,7 @@ else
     exit 1
 fi
 # INSTALACION DE PAQUETES
+apt -y install tar
 apt -y install figlet
 apt -y install dns-utils
 apt -y install dnsutils
