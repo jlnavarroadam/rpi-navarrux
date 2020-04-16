@@ -1,5 +1,5 @@
 # rpi-navarrux
-Como bastionar tu casa u oficina con una raspberry pi mediante iptables
+"Como bastionar tu casa u oficina con una raspberry pi mediante iptables" - Taller HackMadrid 16-4-2020
 
 Lo primero, instalar en la SD raspbian Lite. Yo utilizo Raspberry Pi Imager. Descarga y ejecuta “raspberry pi imager”, selecciona en Choose OS Raspbian (other), y selecciona Rsapbian Lite. 
 
@@ -14,28 +14,35 @@ Si no dispones de esa tarjeta, no pasa nada. El sistema también permite trabaja
 
 Primero, cambia la contraseña root por defecto. Estando en el usuario pi, teclea:
 
-sudo passwd root
+    sudo passwd root
 
 Luego entra como root:
-su
+
+    su
 
 Ahora, dscarga los dos archivos que hay en el repositorio:
+
 InstalacionRPI.sh
 rpi-navarrux.tgz
 
 Copia o clona en tu rpi en la carpeta /opt
-  Por ejemplo:
+  Por ejemplo, ejecuta:
+  
+    cd /opt
+    
     apt-get install git
+    
     git clone https://github.com/jlnavarroadam/rpi-navarrux.git
+    
     cd rpi-navarrux
 
 Una vez tengas esos archivos, dale permisos de ejecución al archivo .sh:
 
-chmod +x InstalacionRPI.sh
+    chmod +x InstalacionRPI.sh
 
 Y a continuación, ejecuta el programa de configuración de Rasberry Pi:
 
-raspi-config
+    raspi-config
 
 Tienes que configurar lo siguiente:
 - Network options:Hostname : Pon el nombre de host de tu rpi (deja lo demás de momento)
@@ -52,8 +59,8 @@ Y ya está.
 
 Una vez lo tengas todo hecho, ya puedes comenzar la instalación:
 
-cd /opt
-./InstalacionRPI.sh
+    cd /opt
+    ./InstalacionRPI.sh
 
 
 RECUERDA QUE EL PUERTO DE CONEXIÓN SSH HA QUEDADO CONFIGURADO EN TCP 22022.
