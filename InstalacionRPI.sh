@@ -2,7 +2,9 @@
 
 ##### AUTOINSTALADOR RPI-NAVARRUX - JL NAVARRO ADAM - LICENCIA CC
 
-# VERFICA QUE HAS ACTIVADO EL PAIS EN LA SECCION NETWORK WIFI
+#### Version 1.1
+
+# VERIFICA QUE HAS ACTIVADO EL PAIS EN LA SECCION NETWORK WIFI
 clear
 echo "Si no has configurado el pais de la wifi, ni activado el servicio ssh, "
 echo "cancela con Crtl+C y ejecuta: "
@@ -29,8 +31,9 @@ else
 fi
 # INSTALACION DE PAQUETES
 apt -y install tar
+apt -y install whois
+apt -y install inadyn
 apt -y install figlet
-apt -y install dns-utils
 apt -y install dnsutils
 apt -y install mc
 apt -y install dnsmasq
@@ -52,6 +55,11 @@ apt -y install top
 apt -y install zip unzip
 apt -y install openssl
 apt -y install ca-certificates
+echo ""
+echo "POSTFIX: Si no vas a configurar un servidor de correo, déjalo en"
+echo "         servidor de correo local."
+sleep 10
+echo ""
 apt -y install postfix
 apt -y install easy-rsa
 apt -y install openvpn
@@ -60,6 +68,7 @@ cp rpi-navarrux.tgz /tmp
 cd /tmp
 tar -xvzf rpi-navarrux.tgz
 cp -ar /tmp/rpi-navarrux/etc/hostapd/* /etc/hostapd/
+cp -ar /tmp/rpi-navarrux/etc/default/hostapd /etc/default/hostapd
 cp -ar /tmp/rpi-navarrux/etc/maltrail /etc/
 cp -ar /tmp/rpi-navarrux/etc/openvpn/keys /etc/openvpn/
 cp -ar /tmp/rpi-navarrux/etc/ssh/sshd_config /etc/ssh/
