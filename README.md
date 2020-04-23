@@ -60,10 +60,17 @@ Y ya está.
 Una vez lo tengas todo hecho, ya puedes comenzar la instalación:
 
     cd /opt
+    
+Si es una nueva instalación ejecuta:
+
     ./InstalacionRPI.sh
 
+Si quieres actualizar, ejecuta:
 
-RECUERDA QUE EL PUERTO DE CONEXIÓN SSH HA QUEDADO CONFIGURADO EN TCP 22022.
+    ./update.sh
+
+RECUERDA: 
+
+EL PUERTO DE CONEXIÓN SSH HA QUEDADO CONFIGURADO EN TCP 22022.
 DEBERÁS ACCEDER CON EL USUARIO DE CONSOLA QUE TE HA PEDIDO EL PROCESO DE INSTALACIÓN
-
 
