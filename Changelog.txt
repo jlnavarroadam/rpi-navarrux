@@ -2,3 +2,9 @@ From Version 1.0 to version 1.1:
 
 - Added new options on main Menu (logs, config)
 - Added support for no-ip.org dynamic ip address
+
+
+From Version 1.1 to Version 1.2:
+
+- Added new menu options
+- Resolved problem client openvpn did not connect
