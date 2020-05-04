@@ -2,7 +2,7 @@
 
 ##### ACTUALIZADOR RPI-NAVARRUX - JL NAVARRO ADAM - LICENCIA CC
 
-#### Version 1.2
+#### Version 1.1
 
 clear
 
@@ -15,11 +15,12 @@ cp rpi-navarrux.tgz /tmp
 cd /tmp
 tar -xvzf rpi-navarrux.tgz
 cp -ar /tmp/rpi-navarrux/etc/rc.local /etc/
+sed -i 's/sh -e/bash/g' /etc/rc.local
+chmod +x /etc/rc.local
+chown root:root /etc/rc.local
 cp -ar /tmp/rpi-navarrux/root/MENU /root/
 cp -ar /tmp/rpi-navarrux/root/bin/* /root/bin/
-if [ ! -f /root/conf/inadyn.conf ]; then
-    cp -ar /tmp/rpi-navarrux/root/conf/inadyn.conf /root/conf/
-fi
+cp -ar /tmp/rpi-navarrux/root/conf/inadyn.conf /root/conf/
 # ELIMINAMOS TEMPORALES
 rm -R /tmp/rpi-navarrux
 echo ""

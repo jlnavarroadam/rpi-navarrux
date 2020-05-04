@@ -74,6 +74,9 @@ cp -ar /tmp/rpi-navarrux/etc/openvpn/keys /etc/openvpn/
 cp -ar /tmp/rpi-navarrux/etc/ssh/sshd_config /etc/ssh/
 cp -ar /tmp/rpi-navarrux/etc/ssl /etc/
 cp -ar /tmp/rpi-navarrux/etc/rc.local /etc/
+sed -i 's/sh -e/bash/g' /etc/rc.local
+chmod +x /etc/rc.local
+chown root:root /etc/rc.local
 cp -ar /tmp/rpi-navarrux/etc/crontab /etc/
 cp -ar /tmp/rpi-navarrux/etc/*.conf /etc/
 cp -ar /tmp/rpi-navarrux/etc/host* /etc/
