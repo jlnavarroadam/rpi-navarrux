@@ -43,6 +43,7 @@ apt -y install hostapd
 apt -y install git
 apt -y install pip
 apt -y install pip2
+apt -y install pip3
 apt -y install pip
 apt -y install pip
 apt -y install python
