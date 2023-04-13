@@ -2,7 +2,7 @@
 
 ##### AUTOINSTALADOR RPI-NAVARRUX - JL NAVARRO ADAM - LICENCIA CC
 
-#### Version 1.1
+#### Version 1.2
 
 # VERIFICA QUE HAS ACTIVADO EL PAIS EN LA SECCION NETWORK WIFI
 clear
@@ -46,7 +46,8 @@ apt -y install pip2
 apt -y install pip
 apt -y install pip
 apt -y install python
-apt -y install git python-pcapy
+# apt -y install git python-pcapy ### USE PCAPY-NG 
+pip3 install pcapy-ng
 apt -y install schedtool
 apt -y install php
 apt -y install postfix
